@@ -1,0 +1,86 @@
+---
+title: About Us
+---
+<div class="rcc-hero rcc-hero-about-us">
+  <div class="rcc-hero-title-holder">
+    <h5>About Us</h5>
+  </div>
+  <div class="rcc-hero-down-arrow-container">
+    <a href="#about-us-content">
+      <img class="rcc-hero-down-arrow" src="/images/down-arrow.svg" alt="Scroll down for details">
+    </a>
+  </div>
+</div>
+<div class="rcc-content" id="about-us-content">
+  <% dato.about_page_contents.each do |about_page_content| %>
+    <% if about_page_content.heading %>
+  <h1><%= about_page_content.heading %></h1>
+    <% end %>
+    <% if about_page_content.image %>
+      <div class="rcc-content-images-words-container">
+    <% end %>
+    <div class="<% if about_page_content.image %>rcc-content-words-container<% end %>">
+      <%= markdown about_page_content.body_text %>
+    </div>
+    <% if about_page_content.image %>
+      <div class="rcc-content-images-container rcc-content-images-container-<%= about_page_content.image_position %>">
+        <img class="rcc-normal" src="<%= about_page_content.image.url(w: 500, fm: :jpg) %>" alt="<%= about_page_content.image_description %>">
+      </div>
+    <% end %>
+    <% if about_page_content.image %>
+      </div>
+    <% end %>
+    <% unless about_page_content == dato.about_page_contents.last %>
+    <hr>
+    <% end %>
+  <% end %>
+</div>
+<style>
+
+strong em, strong + strong {
+ font-size: 20px;
+}
+
+#what-we-do-content div + p, #what-we-do-content h1 + p {
+  text-align: center;
+}
+
+h1#meet-the-team + p {
+  text-align: inherit;
+}
+
+</style>
+<div class="rcc-hero rcc-hero-what-we-do" id="what-we-do">
+  <div class="rcc-hero-title-holder">
+    <h5>What We Do</h5>
+  </div>
+  <div class="rcc-hero-down-arrow-container">
+    <a href="#what-we-do-content">
+      <img class="rcc-hero-down-arrow" src="/images/down-arrow.svg" alt="Scroll down for details">
+    </a>
+  </div>
+</div>
+<div class="rcc-content" id="what-we-do-content">
+  <% dato.what_we_do_page_contents.each do |what_we_do_page_content| %>
+    <% if what_we_do_page_content.heading %>
+  <h1><%= what_we_do_page_content.heading %></h1>
+    <% end %>
+    <% if what_we_do_page_content.image %>
+      <div class="rcc-content-images-words-container">
+    <% end %>
+    <div class="<% if what_we_do_page_content.image %>rcc-content-words-container<% end %>">
+      <%= markdown what_we_do_page_content.body_text %>
+    </div>
+    <% if what_we_do_page_content.image %>
+      <div class="rcc-content-images-container rcc-content-images-container-<%= what_we_do_page_content.image_position %>">
+        <img class="rcc-normal" src="<%= what_we_do_page_content.image.url(w: 500, fm: :jpg) %>" alt="<%= what_we_do_page_content.image_description %>">
+      </div>
+    <% end %>
+    <% if what_we_do_page_content.image %>
+      </div>
+    <% end %>
+    <% unless what_we_do_page_content == dato.what_we_do_page_contents.last %> 
+    <hr>
+    <% end %>
+  <% end %>
+</div>

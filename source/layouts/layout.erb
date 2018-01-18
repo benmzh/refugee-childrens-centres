@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <%= partial "partials/head" %>
+  <body>
+    <%= partial "partials/sticky-menu" %>
+    <% unless current_page.url == "/donate.html" %>
+      <%= partial "partials/donate" %>
+    <% end %>
+    <%= yield %>
+    <%= partial "partials/footer" %>
+    <%= javascript_include_tag ("all.js") %>
+  </body>
+</html>

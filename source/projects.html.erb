@@ -1,0 +1,55 @@
+---
+title: Projects
+---
+<div class="rcc-hero rcc-hero-our-projects">
+  <div class="rcc-hero-title-holder">
+    <h5>Our Projects</h5>
+  </div>
+  <div class="rcc-hero-down-arrow-container">
+    <a href="#our-projects-content">
+      <img class="rcc-hero-down-arrow" src="/images/down-arrow.svg" alt="Scroll down for details">
+    </a>
+  </div>
+</div>
+<div class="rcc-content" id="our-projects-content">
+  <% dato.projects_page_contents.each do |projects_page_content| %>
+    <% if projects_page_content.heading %>
+  <h1><%= projects_page_content.heading %></h1>
+    <% end %>
+    <% if projects_page_content.image %>
+      <div class="rcc-content-images-words-container">
+    <% end %>
+    <div class="<% if projects_page_content.image %>rcc-content-words-container<% end %>">
+      <%= markdown projects_page_content.body_text %>
+    </div>
+    <% if projects_page_content.image %>
+      <div class="rcc-content-images-container rcc-content-images-container-<%= projects_page_content.image_position %>">
+        <img class="rcc-normal" src="<%= projects_page_content.image.url(w: 500, fm: :jpg) %>" alt="<%= projects_page_content.image_description %>">
+      </div>
+    <% end %>
+    <% if projects_page_content.image %>
+      </div>
+    <% end %>
+    <hr>
+  <% end %>
+  <h1 id="our-partners">Our Partners</h1>
+  <p class="rcc-centrer"><span class="bold">We work closely with other organisations to ensure we are offering the most effective, joined up service.</span></p>
+  <div class="rcc-supporter-partner-acknowledgement-card-container">
+    <% dato.partners.each do |partner| %>
+      <% if partner.show_hide == "show" %>
+        <div class="rcc-supporter-partner-acknowledgement-card">
+          <div class="rcc-supporter-partner-acknowledgement-title-container">
+            <p><span class="bold"><%= partner.partner_name %></span></p>
+          </div>
+            <% if partner.partner_link.size > 0 %>
+          <a href="<%= partner.partner_link %>" title="Link to <%= partner.partner_name %>" target="_blank">
+            <img class="rcc-supporters-partners" src="<%= partner.image.url(h: 100, fm: :jpg) %>" alt="<%= partner.image_description %>">
+          </a>
+            <% else %>
+          <img class="rcc-supporters-partners" src="<%= partner.image.url(h: 100, fm: :jpg) %>" alt="<%= partner.image_description %>">
+            <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,261 @@
+//Menu headings:
+h2 {
+ font-size: 32px;
+ margin: 0px;
+ @media (min-width: 1000px) {
+   font-size: 24px;
+ }
+ @media (min-width: 1200px) {
+   font-size: 32px;
+ }
+}
+
+.rcc-sticky-container a {
+  color: inherit;
+}
+
+.rcc-website-header-title-container {
+  display: none;
+  @media (min-width: 1000px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: -7px;
+  }
+}
+
+.rcc-website-header-title {
+  height: 42px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.rcc-hamburger, .rcc-close {
+  height: 30px;
+  width: auto;
+  margin: 20px 10px;
+  @media (min-width: 400px) {
+    margin: 20px;
+  }
+  transition: stroke 0.2s;
+}
+
+.rcc-hamburger {
+  stroke: $rcc-colour-blue;
+}
+
+.rcc-close {
+  stroke: $rcc-colour-white;
+}
+
+.rcc-hamburger:hover, .rcc-close:hover {
+  stroke: $rcc-colour-black;
+}
+
+.rcc-social {
+  height: 30px;
+  width: auto;
+  margin: 20px 0px 20px 0px;
+  fill: $rcc-colour-blue;
+  transition: fill 0.2s;
+}
+
+.rcc-social-link-contact-us {
+  order: 2;
+}
+
+.rcc-social-link-facebook {
+  order: 1;
+}
+
+.rcc-social-link-twitter {
+  order: 3;
+}
+
+.rcc-social-link-instagram {
+  order: 4;
+}
+
+.rcc-social-contact-us {
+  @media (max-width: 520px) {
+    margin: 20px 16px 0px 0px;
+  }
+  @media (max-width: 399px) {
+    margin: 20px 6px 0px 0px;
+  }
+}
+
+.rcc-social-facebook {
+  @media (max-width: 520px) {
+    margin: 20px 0px 0px 0px;
+  }
+}
+
+.rcc-social-twitter {
+  @media (max-width: 520px) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.rcc-social-instagram {
+  margin: 0px 16px 20px 0px;
+  @media (max-width: 520px) {
+    margin: 0px 16px 20px 0px;
+  }
+  @media (max-width: 399px) {
+    margin: 0px 6px 20px 0px;
+  }
+}
+
+.rcc-social:hover {
+  fill: $rcc-colour-black;
+}
+
+.rcc-sticky-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background-color: $rcc-colour-white-lower-opacity;
+  height: 104px;
+  text-align: center;
+  @media (min-width: 521px) {
+    height: 79px;
+    margin-top: 8px;
+  }
+  @media (min-width: 1000px) {
+    height: 112px;
+    margin-top: 0;
+  }
+}
+
+.rcc-sticky-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rcc-sticky-left {
+  text-align: left;
+  width: 45%;
+  @media (min-width: 1000px) {
+    order: 1;
+    text-align: center;
+    order: 2;
+    width: 46%;
+  }
+}
+
+.rcc-sticky-hamburger-hamburger {
+  @media (min-width: 1000px) {
+    display: none;
+  }
+}
+
+.rcc-sticky-hamburger-close {
+  display: none;
+}
+
+.rcc-sticky-centre {
+  order: 2;
+  @media (min-width: 1000px) {
+    order: 1;
+    width: 27%;
+  }
+}
+
+.rcc-sticky-right {
+  order: 3;
+  height: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 45%;
+  @media (min-width: 1000px) {
+    width: 27%;
+  }
+}
+
+.rcc-sticky-right-responsive-wrapper {
+  @media (max-width: 520px) {
+    max-width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.rcc-expanded-menu {
+  display: none;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 425px;
+  width: 100%;
+  color: $rcc-colour-white;
+  background-color: $rcc-colour-blue-lower-opacity;
+  text-align: center;
+  padding-top: 185px;
+  @media (min-width: 400px) {
+    height: 427px;
+  }
+  @media (min-width: 480px) {
+    height: 395px;
+  }
+  @media (min-width: 700px) {
+    height: 533px;
+  }
+  @media (min-width: 1000px) {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-top: 0;
+    background: none;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: left;
+    width: auto;
+    z-index: auto;
+    color: $rcc-colour-blue;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 12px;
+  }
+}
+
+#rcc-expanded-menu:target {
+  display: block;
+}
+
+.rcc-expanded-menu-item {
+  transition: color 0.2s;
+  @media (min-width: 1000px) {
+    margin-right: 20px;
+  }
+}
+
+.rcc-logo-menu {
+  height: 110px;
+  width: 174px;
+  margin-top: 11px;
+  z-index: 2;
+  background-image: url('../images/rcc-logo.png');
+  background-size: cover;
+  @media (min-width: 355px) {
+    height: 132px;
+    width: 207px;
+  }
+  @media (min-width: 1000px) {
+    margin: 0 0 0 20px;
+    transform: translateY(-44px);
+    height: 170px;
+    width: 267px;
+    background-image: url('../images/rcc-logo-large-screen.png');
+  }
+}
+
+.rcc-expanded-menu-item:hover {
+  color: $rcc-colour-black;
+}

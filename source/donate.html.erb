@@ -1,0 +1,61 @@
+---
+title: Donate
+---
+<div class="rcc-hero rcc-hero-donate">
+  <div class="rcc-hero-title-holder">
+    <h5>Donate</h5>
+  </div>
+  <div class="rcc-hero-down-arrow-container">
+    <a href="#donate-content">
+      <img class="rcc-hero-down-arrow" src="/images/down-arrow.svg" alt="Scroll down for details">
+    </a>
+  </div>
+</div>
+<div class="rcc-content" id="donate-content">
+  <h1>Donate</h1>
+  <p class="bold centre">If you would like to give a donation please follow the link below to safely make a donation on our just giving page:</p>
+  <div class="rcc-centrer">
+    <a href="<%= dato.donation_link.web_address %>" title="Go To Donation Link" target="_blank">
+      <div class="rcc-donation-cta">
+        <p class="bold">Donate Now</p>
+      </div>
+    </a>
+  </div>
+  <% dato.donate_page_contents.each do |donate_page_content| %>
+    <% if donate_page_content.heading %>
+  <h1><%= donate_page_content.heading %></h1>
+    <% end %>
+    <% if donate_page_content.image %>
+      <div class="rcc-content-images-words-container">
+    <% end %>
+    <div class="<% if donate_page_content.image %>rcc-content-words-container<% end %>">
+      <%= markdown donate_page_content.body_text %>
+    </div>
+    <% if donate_page_content.image %>
+      <div class="rcc-content-images-container rcc-content-images-container-<%= donate_page_content.image_position %>">
+        <img class="rcc-normal" src="<%= donate_page_content.image.url(w: 500, fm: :jpg) %>" alt="<%= donate_page_content.image_description %>">
+      </div>
+    <% end %>
+    <% if donate_page_content.image %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="rcc-supporter-partner-acknowledgement-card-container">
+    <% dato.supporters.each do |supporter| %>
+      <% if supporter.show_hide == "show" %>
+        <div class="rcc-supporter-partner-acknowledgement-card">
+          <div class="rcc-supporter-partner-acknowledgement-title-container">
+            <p><span class="bold"><%= supporter.supporter_name %></span></p>
+          </div>
+            <% if supporter.supporter_link %>
+          <a href="<%= supporter.supporter_link %>" title="Link to <%= supporter.supporter_name %>" target="_blank">
+            <img class="rcc-supporters-partners" src="<%= supporter.image.url(h: 100, fm: :jpg) %>" alt="<%= supporter.image_description %>">
+          </a>
+            <% else %>
+          <img class="rcc-supporters-partners" src="<%= supporter.image.url(h: 100, fm: :jpg) %>" alt="<%= supporter.image_description %>">
+            <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

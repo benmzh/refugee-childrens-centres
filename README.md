@@ -1,2 +1,2 @@
 # refugee-childrens-centres
-Code and assets for the Refugee Children's Centre website
+For all code and files related to the website for Refugee Children's Centres

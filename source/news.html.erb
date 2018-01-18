@@ -1,0 +1,98 @@
+---
+title: News
+---
+<div class="rcc-hero rcc-hero-what-we-do"><!--Change this class and add appropriate background-->
+  <div class="rcc-hero-title-holder">
+    <h5>News</h5>
+  </div>
+  <div class="rcc-hero-down-arrow-container">
+    <a href="#news-content">
+      <img class="rcc-hero-down-arrow" src="/images/down-arrow.svg" alt="Scroll down for details">
+    </a>
+  </div>
+</div>
+<div class="rcc-content" id="news-content">
+  <% dato.news_items.each do |newsItem| %>
+    <div class="rcc-news-item-container">
+      <h1><%= newsItem.title %></h1>
+      <p class="centre">
+        <%= newsItem.date %>
+        <% if newsItem.author %>
+          &bull; <%= newsItem.author %>
+        <% end %>
+      </p>
+      <% if newsItem.image_1 || newsItem.image_2 || newsItem.image_3 %>
+        <% if newsItem.image_1 && newsItem.image_1_position %>
+          <style>
+            h2:nth-of-type(<%= newsItem.image_1_position + 1 %>)::before {
+              content: url(<%= newsItem.image_1.url(w: 280, fm: :jpg) %>);
+              display: block;
+              margin: 20px 0;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            @media (min-width: 420px) {
+              h2:nth-of-type(<%= newsItem.image_1_position + 1 %>)::before {
+                content: url(<%= newsItem.image_1.url(w: 380, fm: :jpg) %>);
+              }
+            }
+            @media (min-width: 540px) {
+              h2:nth-of-type(<%= newsItem.image_1_position + 1 %>)::before {
+                content: url(<%= newsItem.image_1.url(w: 500, fm: :jpg) %>);
+              }
+            }
+          </style>
+        <% end %>
+        <% if newsItem.image_2 && newsItem.image_2_position %>
+          <style>
+            h2:nth-of-type(<%= newsItem.image_2_position + 1 %>)::before {
+              content: url(<%= newsItem.image_2.url(w: 280, fm: :jpg) %>);
+              display: block;
+              margin: 20px 0;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            @media (min-width: 420px) {
+              h2:nth-of-type(<%= newsItem.image_2_position + 1 %>)::before {
+                content: url(<%= newsItem.image_2.url(w: 380, fm: :jpg) %>);
+              }
+            }
+            @media (min-width: 540px) {
+              h2:nth-of-type(<%= newsItem.image_2_position + 1 %>)::before {
+                content: url(<%= newsItem.image_2.url(w: 500, fm: :jpg) %>);
+              }
+            }
+          </style>
+        <% end %>
+        <% if newsItem.image_3 && newsItem.image_3_position %>
+          <style>
+            h2:nth-of-type(<%= newsItem.image_3_position + 1 %>)::before {
+              content: url(<%= newsItem.image_3.url(w: 280, fm: :jpg) %>);
+              display: block;
+              margin: 20px 0;
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            @media (min-width: 420px) {
+              h2:nth-of-type(<%= newsItem.image_3_position + 1 %>)::before {
+                content: url(<%= newsItem.image_3.url(w: 380, fm: :jpg) %>);
+              }
+            }
+            @media (min-width: 540px) {
+              h2:nth-of-type(<%= newsItem.image_3_position + 1 %>)::before {
+                content: url(<%= newsItem.image_3.url(w: 500, fm: :jpg) %>);
+              }
+            }
+          </style>
+        <% end %>
+      <% end %>
+      <%= markdown newsItem.text_content %>
+    </div>
+    <% unless newsItem == dato.news_items.last %> 
+    <hr>
+    <% end %>
+  <% end %>
+</div>

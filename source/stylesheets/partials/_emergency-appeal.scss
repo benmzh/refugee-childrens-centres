@@ -1,0 +1,97 @@
+.rcc-emergency-appeal-page-cover {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+  width: 100vw;
+  background-color: $rcc-colour-red-lower-opacity;
+  text-align: center;
+}
+
+.rcc-emergency-appeal-banner {
+  background-color: $rcc-colour-white;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.rcc-emergency-appeal-banner h1 {
+  color: $rcc-colour-red;
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+.rcc-emergency-appeal-cta {
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $rcc-colour-red;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: $rcc-colour-red;
+  color: white;
+  padding: 10px;
+}
+
+.rcc-emergency-appeal-cta:hover {
+  background-color: white;
+  color: $rcc-colour-red;
+  border-color: $rcc-colour-red;
+}
+
+.rcc-emergency-appeal-cta p {
+  margin: 0px;
+}
+
+p.rcc-emergency-appeal-cut {
+  display: none;
+}
+
+.rcc-emergency-appeal-close {
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 400px) {
+
+  .rcc-emergency-appeal-banner {
+    width: 300px;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  .rcc-emergency-appeal-banner {
+    width: 450px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+  .rcc-emergency-appeal-page-cover {
+    position: fixed;
+    height: 100vh;
+  }
+
+
+  .rcc-emergency-appeal-banner {
+    width: 800px;
+  }
+
+  .rcc-emergency-appeal-banner h1 {
+    font-size: 40px;
+  }
+
+
+  p.rcc-emergency-appeal-cut {
+    display: inline;
+  }
+
+}

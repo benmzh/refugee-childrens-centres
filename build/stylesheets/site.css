@@ -1,0 +1,403 @@
+.rcc-emergency-appeal-page-cover {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+  width: 100vw;
+  background-color: rgba(182, 0, 0, 0.6);
+  text-align: center; }
+
+.rcc-emergency-appeal-banner {
+  background-color: #FFFFFF;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 20px; }
+
+.rcc-emergency-appeal-banner h1 {
+  color: #b60000;
+  margin-top: 0px;
+  font-size: 30px; }
+
+.rcc-emergency-appeal-cta {
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #b60000;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #b60000;
+  color: white;
+  padding: 10px; }
+
+.rcc-emergency-appeal-cta:hover {
+  background-color: white;
+  color: #b60000;
+  border-color: #b60000; }
+
+.rcc-emergency-appeal-cta p {
+  margin: 0px; }
+
+p.rcc-emergency-appeal-cut {
+  display: none; }
+
+.rcc-emergency-appeal-close {
+  height: 30px;
+  cursor: pointer; }
+
+@media (min-width: 400px) {
+  .rcc-emergency-appeal-banner {
+    width: 300px; } }
+@media (min-width: 600px) {
+  .rcc-emergency-appeal-banner {
+    width: 450px; } }
+@media (min-width: 1000px) {
+  .rcc-emergency-appeal-page-cover {
+    position: fixed;
+    height: 100vh; }
+
+  .rcc-emergency-appeal-banner {
+    width: 800px; }
+
+  .rcc-emergency-appeal-banner h1 {
+    font-size: 40px; }
+
+  p.rcc-emergency-appeal-cut {
+    display: inline; } }
+h2 {
+  font-size: 33px;
+  margin: 0px; }
+
+.rcc-sticky-container a {
+  color: inherit; }
+
+img.rcc-hamburger {
+  height: 30px;
+  width: auto;
+  margin: 20px; }
+
+.rcc-social {
+  height: 30px;
+  width: auto;
+  margin: 20px 20px 20px 0px; }
+
+img.rcc-close {
+  height: 30px;
+  margin-top: 94px; }
+
+.rcc-sticky-container {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.rcc-sticky-left {
+  text-align: left;
+  width: 40%;
+  float: left; }
+
+.rcc-sticky-right {
+  text-align: right;
+  width: 60%;
+  float: left; }
+
+.rcc-expanded-menu {
+  display: none;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-color: rgba(69, 172, 232, 0.9);
+  text-align: center; }
+
+#rcc-expanded-menu:target {
+  display: block; }
+
+.rcc-expanded-menu-item:hover {
+  color: #302F2F; }
+
+@media (min-width: 1000px) {
+  h2 {
+    margin-top: 13px; }
+
+  .rcc-sticky-container {
+    display: flex;
+    flex-direction: row-reverse; }
+
+  .rcc-sticky-left {
+    display: none; }
+
+  .rcc-sticky-right {
+    order: 1;
+    display: inline-block;
+    width: 19%; }
+
+  .rcc-expanded-menu {
+    order: 2;
+    display: inline-block;
+    height: 74px;
+    background: none;
+    width: 81%; }
+
+  .rcc-expanded-menu-item {
+    float: left;
+    padding-left: 47px; }
+
+  .rcc-expanded-menu-item-close {
+    display: none; }
+
+  .rcc-expanded-menu-item:hover {
+    color: #45ACE8; } }
+.rcc-footer p {
+  margin-top: 0px; }
+
+p.rcc-small-print {
+  font-size: 11px;
+  margin: 0px 20px 5px 20px; }
+
+.rcc-footer-left p.rcc-small-print {
+  margin-top: 14px; }
+
+.rcc-footer-right a {
+  color: inherit; }
+
+.rcc-footer {
+  background-color: #DADEDF;
+  padding: 20px 0px 20px 0px;
+  text-align: center; }
+
+.ww-logo {
+  height: 17px;
+  margin-top: 8px; }
+
+@media (min-width: 600px) {
+  .rcc-footer {
+    height: 50px; }
+
+  .rcc-footer-left {
+    width: 50%;
+    float: left;
+    text-align: left; }
+
+  .rcc-footer-right {
+    width: 50%;
+    float: left;
+    text-align: right; } }
+html {
+  width: 100%; }
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+  color: #302F2F; }
+
+body div {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+a {
+  text-decoration: none;
+  color: #45ACE8; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Amatic SC";
+  font-weight: 700;
+  text-align: center; }
+
+h1 {
+  font-size: 40px;
+  clear: both; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 13px;
+  color: #45ACE8;
+  margin-top: 0px; }
+
+p {
+  font-size: 16px; }
+
+p.bold {
+  font-weight: 700; }
+
+p.centre {
+  text-align: center; }
+
+span.bold {
+  font-weight: 700; }
+
+img.rcc-normal {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+
+img.rcc-volunteer {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+
+img.rcc-float-right {
+  float: right;
+  margin-left: 20px; }
+
+img.rcc-float-left {
+  float: left;
+  margin-right: 20px; }
+
+img.rcc-supporters-partners {
+  height: 100px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+.rcc-content {
+  padding: 20px; }
+
+.rcc-centrer {
+  text-align: center; }
+
+.rcc-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 450px;
+  text-align: center;
+  color: white; }
+
+.rcc-hero-index {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/children-outside.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero-about-us {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/outdoor-playdough.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero-our-projects {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/entrance.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero-get-involved {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/simon-says.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero-get-involved h3 {
+  color: white; }
+
+.rcc-hero-donate {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/playdough.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero-contact-us {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../images/elephant-drawing.jpeg") no-repeat center;
+  background-size: cover; }
+
+.rcc-hero h5 {
+  padding-top: 25vh;
+  font-size: 75px;
+  margin-top: 0px;
+  color: #45ACE8;
+  text-shadow: 0px 0px 5px #302F2F; }
+
+.rcc-hero-down-arrow-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center; }
+
+.rcc-hero-down-arrow {
+  margin-left: auto;
+  margin-right: auto; }
+
+.rcc-donation-cta {
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #45ACE8;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #45ACE8;
+  color: white;
+  padding: 10px; }
+
+.rcc-donation-cta:hover {
+  background-color: white;
+  color: #45ACE8;
+  border-color: #45ACE8; }
+
+.rcc-donation-cta p {
+  margin: 0px; }
+
+.rcc-supporter-partner-acknowledgement-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px 100px; }
+
+.rcc-supporter-partner-acknowledgement-card {
+  width: 180px;
+  margin: 20px;
+  text-align: center; }
+
+.rcc-contact-form {
+  padding-top: 50vh;
+  text-align: center; }
+
+.rcc-contact-field {
+  display: inline-block;
+  clear: both;
+  width: 80vw;
+  max-width: 350px;
+  border-style: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font: inherit; }
+
+.rcc-contact-submit-button {
+  width: auto;
+  background-color: #45ACE8;
+  color: white;
+  border-style: solid;
+  border-color: #45ACE8;
+  border-width: 3px; }
+
+.rcc-contact-submit-button:hover {
+  background-color: rgba(69, 172, 232, 0.2); }
+
+.rcc-contact-submit-button p.bold {
+  margin: 0px; }
+
+.rcc-thank-you-oops-spacer {
+  background-color: #45ACE8;
+  height: 74px; }
+
+@media (min-width: 400px) {
+  img.rcc-volunteer {
+    width: 200px; } }
+@media (min-width: 450px) {
+  .rcc-supporter-partner-acknowledgement-title-container {
+    height: 50px; } }
+@media (min-width: 700px) {
+  .rcc-hero {
+    height: 600px; }
+
+  .rcc-hero h5 {
+    padding-top: 250px; }
+
+  img.rcc-normal {
+    width: 500px; } }
